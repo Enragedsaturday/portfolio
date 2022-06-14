@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="assets/global.css" />
+    <title>Everything AA</title>
+    <meta property="og:title" content="Everything AA | Alcoholics Anonymous App"/>
+    <meta property="og:description" content="The best app for alcoholics anonymous content."/>
+    <meta property="og:image" content="tanukitech.dev/assets/screenshot1.webp"/>
+    <meta property="og:url" content="https://www.tanukitech.dev/everything-aa"/>
+    <meta property="og:site_name" content="Everything AA"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Everything AA | Alcoholics Anonymous App"/>
+    <meta name="twitter:description" content="The best app for alcoholics anonymous content."/>
+    <meta name="twitter:image" content="tanukitech.dev/assets/screenshot1.webp"/>
+    <meta name="description" content="The most comprehensive Alcoholics Anonymous App available for ios and Android. All the literature. Completely free, without any ads."/>
+  </head>
+  <body>
+    <div class="min-h-screen min-w-full bg-gray-800">
+      <div>
+        <div class="w-full py-2 bg-gray-500">
+          <nav
+            class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
+            aria-label="Global"
+          >
+            <div class="flex items-center flex-1">
+              <div class="flex items-center justify-between w-full md:w-auto">
+                <a href="#">
+                  <span class="sr-only">Workflow</span>
+                  <img
+                    class="h-8 w-auto sm:h-10"
+                    src="assets/logo.webp"
+                    alt=""
+                  />
+                </a>
+                <div
+                  class="-mr-2 flex items-center md:hidden"
+                  onclick="showHide()"
+                >
+                  <button
+                    type="button"
+                    class="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white"
+                    aria-expanded="false"
+                  >
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Heroicon name: outline/menu -->
+                    <svg
+                      class="h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="hidden space-x-10 md:flex md:ml-10">
+                <a
+                  href="index.html"
+                  class="font-medium text-white hover:text-gray-300"
+                  >Home</a
+                >
+              </div>
+            </div>
+            <div class="hidden md:flex">
+              <a
+                href="#contact-form"
+                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
+              >
+                Contact Us
+              </a>
+            </div>
+          </nav>
+        </div>
+
+        <!--
+          Mobile menu, show/hide based on menu open state.
+  
+          Entering: "duration-150 ease-out"
+            From: "opacity-0 scale-95"
+            To: "opacity-100 scale-100"
+          Leaving: "duration-100 ease-in"
+            From: "opacity-100 scale-100"
+            To: "opacity-0 scale-95"
+        -->
+        <div
+          class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+          id="mobile-menu"
+          hidden
+        >
+          <div
+            class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"
+          >
+            <div class="px-5 pt-4 flex items-center justify-between">
+              <div>
+                <img class="h-8 w-auto" src="assets/logo.webp" alt="" />
+              </div>
+              <div class="-mr-2" onclick="showHide()">
+                <button
+                  type="button"
+                  class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                >
+                  <span class="sr-only">Close menu</span>
+                  <!-- Heroicon name: outline/x -->
+                  <svg
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="px-2 pt-2 pb-3 space-y-1">
+              <a
+                href="index.html"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                >Home</a
+              >
+
+              <a
+                href="comingsoon.html"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                >Portfolio</a
+              >
+
+              <a
+                href="comingsoon.html"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                >Blog</a
+              >
+
+              <a
+                href="#"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                >Company</a
+              >
+            </div>
+            <a
+              href="#contact-form"
+              class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
+              onclick="showHide()"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+        <div class="mx-auto max-w-4xl">
+          <div class="flex flex-col md:flex-row">
+            <div
+              class="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center"
+            >
+              <div>
+                <img
+                  src="assets/aaIcon.webp"
+                  alt="icon"
+                  class="mx-auto rounded-full w-32 md:w-48 mt-10"
+                />
+                <h1
+                  class="mt-4 text-center text-4xl tracking-tight font-extrabold text-blue-500 sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl"
+                >
+                  <span class="md:block">Everything AA</span>
+                </h1>
+                <h2
+                  class="mt-3 text-gray-100 sm:mt-5 text-xl text-center"
+                >
+                  The most comprehensive Alcoholics Anonymous App available for
+                  ios and Android. Completely free, without any ads.<br/><br/> <p class="font-bold">Click on
+                  your corresponding app store icon to download now.</p>
+                </h2>
+                <ul class="text-gray-100 list-disc mt-10 text-left pl-8">
+                  <li>Alcoholics Anonymous Online Meeting Finder</li>
+                  <li>Big Book Text and Audio</li>
+                  <li>12 Steps and 12 Traditions Text and Audio</li>
+                  <li>Joe and Charlie Tapes</li>
+                  <li>Daily Reflections</li>
+                  <li>Living Sober</li>
+                  <li>Sobriety Tracker</li>
+                  <li>Pamphlets</li>
+                  <li>And More!</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="mx-auto flex md:flex-col w-3/4 md:w-1/2 justify-center items-center mt-10"
+            >
+              <div class="mr-2 md:mr-0">
+                <a
+                  href="https://apps.apple.com/us/app/everything-aa/id1565768051"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="assets/appleBadge.svg"
+                    class="w-44"
+                    alt="apple app store"
+                  />
+                </a>
+              </div>
+              <div class="mt-0 md:mt-8 ml-2 md:ml-0">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.bigbook3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img
+                    src="assets/google-play-badge.webp"
+                    class="w-44"
+                    alt="google play"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto max-w-6xl flex justify-center mt-10 flex-wrap">
+          <img
+            src="assets/screenshot1.webp"
+            alt="app screenshot"
+            class="h-[30vh] rounded-xl m-3"
+          />
+          <img
+            src="assets/screenshot2.webp"
+            alt="app screenshot"
+            class="h-[30vh] rounded-xl m-3"
+          />
+          <img
+            src="assets/screenshot3.webp"
+            alt="app screenshot"
+            class="h-[30vh] rounded-xl m-3"
+          />
+          <img
+            src="assets/screenshot4.webp"
+            alt="app screenshot"
+            class="h-[30vh] rounded-xl m-3"
+          />
+          <img
+            src="assets/screenshot5.webp"
+            alt="app screenshot"
+            class="h-[30vh] rounded-xl m-3"
+          />
+        </div>
+      </div>
+      <div class="bg-gray-800 p-10 flex flex-col">
+        <div class="mx-auto text-gray-100 text-xl mb-3">
+          <h2>Contact Us</h2>
+        </div>
+        <div id="contact-form"></div>
+        <form
+          onsubmit="formSubmit(event)"
+          class="w-11/12 max-w-screen-md flex flex-col bg-gray-200 mx-auto py-6 rounded-2xl"
+          id="form"
+          address="everythingaa@tanukitech.dev"
+          subject="Everything AA Website Contact"
+        >
+          <div class="mx-auto w-11/12">
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email</label
+            >
+            <div class="my-2">
+              <input
+                type="email"
+                name="email"
+                required
+                id="email"
+                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-11/12 sm:text-sm border-gray-100 rounded-md"
+                placeholder="you@example.com"
+                aria-describedby="email-description"
+              />
+            </div>
+          </div>
+          <div class="w-11/12 mx-auto">
+            <label for="comment" class="block text-sm font-medium text-gray-700"
+              >Your message</label
+            >
+            <div class="mt-1">
+              <textarea
+                rows="4"
+                required
+                name="comment"
+                id="comment"
+                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-11/12 sm:text-sm border-gray-300 rounded-md"
+              ></textarea>
+            </div>
+          </div>
+          <div class="px-8 pt-4">
+            <button
+              type="submit"
+              id="submit"
+              class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              Submit
+            </button>
+          </div>
+          <div
+            id="success"
+            class="absolute left-0 right-0 mx-auto w-[200px] mt-32 text-center bg-green-400/70 rounded-xl z-10 animate-fadeOut animate-slower"
+            hidden
+          >
+            <p>Message Submitted Successfully!</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <footer class="bg-gray-50" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div
+      class="max-w-md mx-auto pt-12 px-4 sm:max-w-7xl sm:px-6 lg:pt-16 lg:px-8"
+    >
+      <div class="flex justify-center items-center">
+        <div class="w-1/5">
+          <img class="h-10" src="assets/logo.webp" alt="Company name" />
+          <p class="text-gray-500 text-base my-7">
+            First Class Web and Mobile Development
+          </p>
+          <div class="flex flex-wrap">
+            <a
+              href="https://github.com/Enragedsaturday"
+              target="_blank"
+              rel="noopener"
+              class="text-gray-400 hover:text-gray-500"
+            >
+              <span class="sr-only">GitHub</span>
+              <svg
+                class="h-6 w-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="mx-10">
+          <div class="flex flex-col md:flex-row">
+            <div class="flex flex-col md:mx-10">
+              <h3
+                class="text-sm font-semibold text-gray-500 tracking-wider uppercase"
+              >
+                Company
+              </h3>
+              <ul role="list" class="mt-4 space-y-4">
+                <li>
+                  <a
+                    href="#"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    About
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Blog
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-12 md:mt-0 md:mx-10 flex flex-col">
+              <h3
+                class="text-sm font-semibold text-gray-500 tracking-wider uppercase"
+              >
+                Legal
+              </h3>
+              <ul role="list" class="mt-4 space-y-4">
+                <li>
+                  <a
+                    href="privacy.html"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Privacy
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-12 md:mt-0 md:mx-10 flex flex-col">
+              <h3
+                class="text-sm font-semibold text-gray-500 tracking-wider uppercase"
+              >
+                Apps
+              </h3>
+              <ul role="list" class="mt-4 space-y-4">
+                <li>
+                  <a
+                    href="everything-aa.html"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Everything AA
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-gray-200 py-8">
+        <p class="text-base text-gray-500 xl:text-center">
+          &copy; 2021 TanukiTech LLC. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+</html>
+
+<script type="text/javascript" src="./assets/index.js"></script>
